@@ -1,0 +1,28 @@
+<html>
+    <head>
+    <% include navbaradmin.ejs%>
+    <br>
+    <h1>category</h1>
+    </head>
+    <body>
+    
+    <table border ="1">
+   
+    <td style = "font-weight:bold">Category</td>       
+    <td style = "font-weight:bold"></td>
+    <td style = "font-weight:bold"></td>
+    <% data.forEach (x=>{ %>
+    <tr>
+    <td><h4><a href="/adminproduct/<%= x.id%>"> <%=x.category%> </a></h4></td>
+    <td><h4><a href="/admdeletecategory/<%= x.id%>">delete </a></h4></td>
+    <td><h4><a href="/admineditcategory/<%= x.id%>">edit </a></h4></td>
+    </tr>
+    <% }) %>
+    </table>
+    <a href="/admininsertcategory">insert </a>
+
+
+
+    
+    </body>
+</html>

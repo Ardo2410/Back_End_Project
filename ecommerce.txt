@@ -1,0 +1,46 @@
+buat website e-commerce,
+
+tentang fashion produknya per season misal kategori winter 2018, summer 2018 dll
+tiap season punya produk per kategori lg, misal dress tops dsb.
+dri tiap produk lg ad size nya ada ukuran dari tiap produk.
+sama ada pilihan warna dari tiap produk
+dari tiap produk psti ada nama deskripsi dan harga.
+sbg owner mau ada akses untuk masuk melalui seasonal kategori dan kategori produk nya.
+
+jd home page nampilin 
+tulisan seasonal kategori
+pas season di klik muncul nya produk dri kategori tersebut
+stlh di klik lg mncul list nya, dan hanya mau di liat nama dan harga
+deskripsi ketika di klik baru mncul detail nya
+isi detail nama nya harga nya deskripsi nya apa dan pilihan size nya apa aja dan warna
+
+lalu di masing" produk punya stok,
+jika stok nol kash notif stok sudah habis
+kalo stok lebih besar dri nol berarti bisa add to cart
+
+tambah satu page di navbar ada page cart
+isi cart ada berapa dan logout dan welcome nama user di navbar
+
+di cart bisa liat nama dan harga
+lalu bisa di delete
+
+di bawah ada grand total
+
+proteksi nya di add to cart
+
+di navbar ada cart kalau belom login di lempar ke login page lg
+di cart ada button check out. hrs isi data pribadi alamat dan no hp
+
+munculah invoice jd invoice ada invoice detail
+
+di invoice ad invoice kode, invoice terbuat kapan, detail nama alamat no hp user, list produk yg di beli apa aja
+
+di navbar tambah lg history invoice
+itu cuman tampilin kode invoice setelah kode invoice di klik mncul invoice yg td di buat.
+
+
+
+skrg sebagai admin
+admin harus login wajib!
+bisa masukin season dri season mncul list nya, season nya jg bsa di apus dri season ada list kategori produk,
+admin bsa liat invoice nya apa aja. hrs order by descending.

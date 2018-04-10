@@ -1,0 +1,10 @@
+<html>
+    <head>
+    <% include navbar.ejs%>
+    </head>
+    <body>
+    <% for (var i=0;i<data.length;i++){%>
+    <h4><a href="/category/<%= data[i].id%>"> <%=data[i].season%> </a></h4>
+    <% } %>
+    </body>
+</html>

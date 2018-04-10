@@ -1,0 +1,27 @@
+<html>
+    <head>
+    <% include navbaradmin.ejs%>
+    <h1>Size</h1>
+    </head>
+    <body>
+    
+    <table border ="1">
+   
+    <td style = "font-weight:bold">Size</td>
+    <td style = "font-weight:bold">Stock</td>    
+    <td style = "font-weight:bold"></td>
+    <td style = "font-weight:bold"></td>
+     <% data.forEach (x=>{ %>
+    <tr>
+    <td><h4><%=x.size%> </h4></td>    
+    <td><h4><%=x.stock%> </h4></td>        
+    <td><h4><a href="/admdeletesize/<%= x.idsize%>">delete </a></h4></td>
+    <td><h4><a href="/admineditsize/<%= x.idsize%>">edit </a></h4></td>
+    </tr>
+    <% }) %>
+    </table>
+
+    <a href="/admininsertsize">insert </a> 
+    
+    </body>
+</html>

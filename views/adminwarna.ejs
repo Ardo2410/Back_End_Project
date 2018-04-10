@@ -1,0 +1,25 @@
+<html>
+    <head>
+    <% include navbaradmin.ejs%>
+    <h1>Colour</h1>
+    </head>
+    <body>
+    
+    <table border ="1">
+   
+    <td style = "font-weight:bold">Colour</td>       
+    <td style = "font-weight:bold"></td>
+    <td style = "font-weight:bold"></td>
+     <% data.forEach (x=>{ %>
+    <tr>
+    <td><h4><a href="/adminsize/<%= x.id%>"><%=x.color%> </h4></td>
+    <td><h4><a href="/admdeletewarna/<%= x.id%>">delete </a></h4></td>
+    <td><h4><a href="/admineditwarna/<%= x.id%>">edit </a></h4></td>
+    </tr>
+    <% }) %>
+    </table>
+
+    <a href="/admininsertwarna">insert </a>
+    
+    </body>
+</html>

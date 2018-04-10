@@ -1,0 +1,12 @@
+<html>
+    <head>
+    <% include navbar.ejs%>
+    <title>Product</title>
+    </head>
+            <body>
+            <h1>Product</h1>
+            <% for (var i=0;i<data.length;i++){%>
+            <h4><a href="/productdetail/<%= data[i].id%>/<%= data[i].idcolor%>"> <%=data[i].productname%> </a></h4>
+            <p>Harga: <%=data[i].price%></p>
+            <% } %>
+            </body>

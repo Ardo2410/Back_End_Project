@@ -1,0 +1,23 @@
+<html>
+    <head>
+    <% include navbaradmin.ejs%>
+    <h1>seasons</h1>
+    </head>
+    <body>
+
+    <table border ="1">
+    <td style = "font-weight:bold">Season</td>       
+    <td style = "font-weight:bold"></td>
+    <td style = "font-weight:bold"></td>
+    <% data.forEach (x=>{ %>
+   <tr>
+    <td><h4><a href="/admincategory/<%= x.id%>"> <%=x.season%> </a></h4></td>
+    <td><h4><a href="/admdeleteseason/<%= x.id%>">delete </a></h4></td>
+    <td><h4><a href="/admineditseasons/<%= x.id%>">edit </a></h4></td>
+   </tr>
+    <% }) %>
+    </table>
+    <a href="/admininsertseasons">insert </a>
+    
+    </body>
+</html>

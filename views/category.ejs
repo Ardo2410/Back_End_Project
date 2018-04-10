@@ -1,0 +1,11 @@
+<html>
+    <head>
+    <% include navbar.ejs%>
+    <title>Category</title>
+    </head>
+            <body>
+            <h1>Category</h1>
+            <% for (var i=0;i<data.length;i++){%>
+            <h4><a href="/product/<%= data[i].id%>"> <%=data[i].category%> </a></h4>
+            <% } %>
+            </body>

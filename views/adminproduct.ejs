@@ -1,0 +1,29 @@
+<html>
+    <head>
+    <% include navbaradmin.ejs%>
+    <h1>Product</h1>
+    </head>
+    <body>
+    
+    <table border ="1">
+   
+    <td style = "font-weight:bold">Product</td>
+    <td style = "font-weight:bold">Detail</td>
+    <td style = "font-weight:bold">Price</td>        
+    <td style = "font-weight:bold"></td>
+    <td style = "font-weight:bold"></td>
+     <% data.forEach (x=>{ %>
+    <tr>
+    <td><h4><a href="/adminwarna/<%= x.id%>"><%=x.productname%> </h4></td>
+    <td><h4> <%=x.productdetail%> </h4></td>
+    <td><h4> <%=x.price%> </h4></td>
+    <td><h4><a href="/admdeleteproduct/<%= x.id%>">delete </a></h4></td>
+    <td><h4><a href="/admineditproduct/<%= x.id%>">edit </a></h4></td>
+    </tr>
+    <% }) %>
+    </table>
+
+    <a href="/admininsertproduct">insert </a>
+    
+    </body>
+</html>

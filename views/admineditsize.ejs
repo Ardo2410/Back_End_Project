@@ -1,0 +1,13 @@
+<html>
+    <head>
+    </head>
+    <body>
+            <% include navbaradmin.ejs %>
+        <form method="post" action="/updatesize/<%= idsize %>">       
+            size : <input type="text" name="size" placeholder="size"><br>
+            stock : <input type="text" name="stock" placeholder="stock"><br>
+            
+            <input type="Submit" value="Submit">
+        </form>
+    </body>
+</html>

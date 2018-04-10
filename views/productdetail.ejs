@@ -1,0 +1,53 @@
+<html>
+        <head>
+                <% include navbar.ejs %>
+        </head>
+<body>
+    <form method="post" action="/setinsert4">
+        
+		<h1><%= product[0].productname; %></h1> <br>
+		Harga : <%= product[0].price; %> <br>
+		Description : <%= product[0].productdetail; %>
+
+		<br>
+
+      <select id="productcolor" name="productcolorid" onchange="change(this.value)">
+          <option selected>productcolor</option>
+          <% productcolor.forEach(productcolor => { %>
+          <option value="<%= productcolor.id %>"> <%= productcolor.color %> </option>
+          <% }) %>
+      </select>
+
+      <select name="productsize">
+          <option selected>size</option>
+          <% productsize.forEach(productsize => { %>
+          <option value="<%= productsize.id %>"> <%= productsize.size %> </option>		  
+          <% }) %>
+      </select>
+
+       <select name="productsize">
+          <option selected>stock</option>
+          <% productsize.forEach(productsize => { %>
+          <option value="<%= productsize.id %>"> <%= productsize.stock %> </option>		  
+          <% }) %>
+      </select>
+
+
+        <input type="Submit" value="Add to Cart">
+        </form>
+ 
+        <script>
+            window.onload = () => {
+                if (window.location.href.split('?').length > 1) {
+                    let productcolor = window.location.href.split('?')[1].split('&')[0].split('=')[1];
+                    document.getElementById('productcolor').options['selectedIndex'] = productcolor;
+                }
+            }
+            let change = id => {
+                let selected = document.getElementById('productcolor').options['selectedIndex'];
+                window.location = "?selected="+selected+"&productsize="+id;
+            }
+            
+            </script>
+      </body>
+

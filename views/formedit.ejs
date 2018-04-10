@@ -1,0 +1,14 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+            <% include navbaradmin.ejs %>
+        <form method="post" action="/editdata/<%= id %>">
+            NIK : <input type="text" name="nik" value="" placeholder="NIK"><br>
+            Name : <input type="text" name="name" value="" placeholder="Name"><br>
+            Phone Number : <input type="text" name="phonenumber" value="" placeholder="Phone Number"><br>
+            <input type="Submit" value="Submit">
+        </form>
+    </body>
+</html>

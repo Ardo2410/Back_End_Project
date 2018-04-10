@@ -1,0 +1,33 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+            <% include navbar.ejs %>
+        <table border="1">
+            <tr>
+                <td style="font-weight:bold">nik</td>
+                <td style="font-weight:bold">name</td>
+                <td style="font-weight:bold">phonenumber</td>
+                <td style="font-weight:bold"></td>
+                <td style="font-weight:bold"></td>
+            </tr>
+            <% 
+            for (var i=0; i<data.length; i++)
+            {
+            %>
+            <tr>
+                <td><%= data[i].nik %></td>
+                <td><%= data[i].name %></td>
+                <td><%= data[i].phonenumber %></td>
+                <td><a href="/deletedata/<%= data[i].id %>">delete</a></td>
+                <td><a href="/formedit/<%= data[i].id %>">edit</a></td>
+            </tr>
+            <% 
+            }
+             %>
+        </table>
+        <br><br>
+        <a href="/forminsert">Insert</a>
+    </body>
+</html>
